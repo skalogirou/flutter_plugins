@@ -10,7 +10,7 @@ class GoogleMap extends StatefulWidget {
   GoogleMap({
     @required this.onMapCreated,
     GoogleMapOptions options,
-    this.gestureRecognizers,
+    //this.gestureRecognizers,
   }) : options = GoogleMapOptions.defaultOptions.copyWith(options);
 
   final MapCreatedCallback onMapCreated;
@@ -39,7 +39,7 @@ class _GoogleMapState extends State<GoogleMap> {
       return AndroidView(
         viewType: 'plugins.flutter.io/google_maps',
         onPlatformViewCreated: onPlatformViewCreated,
-        gestureRecognizers: widget.gestureRecognizers,
+        //gestureRecognizers: widget.gestureRecognizers,
         creationParams: widget.options._toJson(),
         creationParamsCodec: const StandardMessageCodec(),
       );
